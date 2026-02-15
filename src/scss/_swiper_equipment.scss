@@ -1,10 +1,10 @@
 
    
-
+@use './variables' as *;
 .brands__container {    
     width: 100%;
     height: auto;
-    background-color: #F8F8F8;
+    background-color: $color-bg;
 
 }
 /* SWIPER */
@@ -23,8 +23,8 @@ font-size: 16px;
 line-height: 24px;
 letter-spacing: -0.2px;
 text-transform: uppercase;
-color: #7E7E82;
- background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 88.61%);
+color: $color-bg;
+ background: linear-gradient(270deg, $color-bg 0%, $color-white 88.61%);
 }
 
 .swiper__title--text {
@@ -48,8 +48,8 @@ color: #7E7E82;
   width: 224px;
   height: 160px;
   border-radius: 8px;
-  font-family: 'TT Lakes', sans-serif;
-  background-color: #FFFFFF;
+  font-family: $font-main;
+  background-color: $color-white;
   padding: 16px;
 }
 
@@ -70,14 +70,14 @@ position: relative;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: gray;   
+    background-color: $color-bg;   
 }
 
 
 .toggle--btn {
     width: 134px;
     height: 24px;
-    font-family: 'TT Lakes', sans-serif;
+    font-family: $font-main;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;

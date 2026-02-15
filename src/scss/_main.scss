@@ -36,7 +36,7 @@ footer {
   gap: 8px;
   text-align: center;
   padding: 50px 16px 16px 16px;
-  background-color: #F8F8F8;
+  background-color: $color-bg;
 }
 /* Overlay */
 .overlay {
@@ -226,7 +226,7 @@ align-items: center;
 text-decoration: none;
 font-weight: 500;
 font-size: 18px;
-color: #1B1C21;
+color: $color-black;
 line-height: 24px;
 letter-spacing: -0.2px;
 
@@ -282,8 +282,29 @@ letter-spacing: -0.2px;
         gap: 8px;
         text-align: center;
         padding: 50px 16px 16px 16px;
-        background-color: #F8F8F8;
+        background-color: $color-bg;
 
+    }
+
+    footer > div {
+    flex: 1;
+    }
+
+    footer > div:first-child {
+        text-align: left;
+    }
+
+    footer > div:nth-child(2) {
+        text-align: center;
+    }
+
+    footer > div:nth-child(3) {
+        text-align: right;
+    }
+
+
+        .swiper-pagination {
+        display: none; 
     }
 }
 
@@ -379,7 +400,9 @@ letter-spacing: -0.2px;
   .overlay {
     display: none;
   }
-
+  .swiper-pagination {
+    display: none;
+  }
   
 footer {
     

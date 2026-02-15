@@ -1,5 +1,5 @@
 
-
+@use './variables' as *;
 /* Swiper container */
 .swiper__title--text {
 padding: 16px;
@@ -8,8 +8,8 @@ font-size: 16px;
 line-height: 24px;
 letter-spacing: -0.2px;
 text-transform: uppercase;
-color: #7E7E82;
- background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+color: $color-bg;
+ background: linear-gradient(270deg, $color-bg 0%, $color-white 98.61%);
 }
 
 .swiper-slide.services-item {
@@ -17,7 +17,7 @@ color: #7E7E82;
   padding: 16px;
   width: 270px;
   height: 200px;
-  background-color: white;
+  background-color: $color-white;
   border-radius: 8px;
   margin-bottom: 50px;
 }
@@ -45,7 +45,7 @@ color: #7E7E82;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0px;
-  color: #7E7E82;
+  color: $color-bg;
 
 }
 
@@ -63,7 +63,7 @@ color: #7E7E82;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: gray;   
+    background-color: $color-gray;   
 }
 
 
@@ -76,13 +76,13 @@ font-size: 16px;
 line-height: 24px;
 letter-spacing: -0.2px;
 text-transform: uppercase;
-color: #7E7E82;
- background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+color: $color-gray;
+ background: linear-gradient(270deg, $color-bg 0%, $color-white 98.61%);
 }
 
 .services__table {
   width: 100%;
-  background-color: white;
+  background-color: $color-white;
   table-layout: fixed;
   text-align: justify;
   border-collapse: collapse;
@@ -95,7 +95,7 @@ color: #7E7E82;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.2px;
-  color: #7E7E82; 
+  color: $color-gray; 
 }
 
 .services__table-value {
@@ -104,12 +104,12 @@ color: #7E7E82;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.2px;
-  color: #1B1C21;
+  color: $color-black;
 }
 
 .services__table td,
 .services__table th {
-  border-bottom: 3px solid #e6e3e3;
+  border-bottom: 1px solid $color-gray;
 }
 
 .services_order {
@@ -153,7 +153,7 @@ color: #7E7E82;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.2px;
-  color: #7E7E82;
+  color: $color-gray;
   
 }
 
@@ -162,7 +162,7 @@ color: #7E7E82;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.2px;
-  color: #1B1C21;
+  color: $color-bg;
 }
 
 }
