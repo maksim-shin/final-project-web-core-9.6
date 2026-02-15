@@ -24,16 +24,18 @@
 
     display: flex;
     align-items: center;
-    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    
 }
 
 .swiper__title--text {
-    font-family: $font-main;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    text-transform: uppercase;  
+  width: 100%;
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);  
 }
 
 
@@ -51,13 +53,6 @@
 }
 
 
-/* Swiper pagination */ 
-.swiper-pagination {
-display: flex;
-justify-content: center;
-
-
-}
 
 .swiper-pagination-bullet-active {
     background-color: gray;   

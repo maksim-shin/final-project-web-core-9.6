@@ -11,10 +11,11 @@
 
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body>
-<div class="main__page">
-    <!-- SIDE MENU PANEL -->
-     <nav class="modal__navigation modal__navigation-active">
+    <body>
+        <div class="content__main__container">
+        <div class="main__page">
+        <!-- SIDE MENU PANEL -->
+        <nav class="modal__navigation modal__navigation-active">
 
         <div class="navigation__header">
             <div class="navigation__header__left">
@@ -62,7 +63,7 @@
             </ul>
         </div>
 
-        <footer class="modal__panel__footer">
+        <div class="modal__panel__footer">
             <div class="footer__panel__contact">
                 <a class="panel__contact__link" href="#">
                     <img class="panel__contact--call" src="img/ic/call.svg" alt="">
@@ -92,19 +93,19 @@
                 <a class="language--ch" href="#">CH</a>
             </div>
 
-        </footer>
-    </nav>
+        </div>
+        </nav>
 
-    <!-- OVERLAY -->
-    <div class="overlay"></div>
+        <!-- OVERLAY -->
+        <div class="overlay"></div>
 
-    <!-- MAIN CONTENT -->
-    <main class="page">
+        <!-- MAIN CONTENT -->
+        <main class="page">
 
-        <section class="services">
+            <section class="services">
 
-            <!-- Services header -->
-            <header class="services__header">
+                <!-- Services header -->
+                <header class="services__header">
                 <div class="services__toolbar">
 
                     <div class="toolbar__button--left">
@@ -147,10 +148,10 @@
                     </div>
                     
                 </div>
-            </header>
+                </header>
 
                 <!-- Navigation menu -->
-            <div class="section__navbar">
+                <div class="section__navbar">
                 <div class="highlight"></div>
                 <h2 class="hero__section--title">Услуги и сервисы</h2>
                 <div class="toolbar__button--right--2">
@@ -164,28 +165,23 @@
                             <img class="toolbar__button--icon" src="img/ic/checkstatus.svg" alt="">
                         </button>
                 </div>
-            </div>
-            <nav class="services__navigation services__navigation--scroll">
+                </div>
+                <nav class="services__navigation services__navigation--scroll">
                 <a href="#brands" class="services__navigation--link">Ремонтируемые бренды</a>
                 <a href="#devices" class="services__navigation--link">Ремонтируемые устройства</a>
                 <a href="#prices" class="services__navigation--link">Цены на услуги</a>
                 <a href="#addresses" class="services__navigation--link">Адреса сервисных центров</a>
                 <a href="#special" class="services__navigation--link">Специальные цены</a>
                 <a href="#reviews" class="services__navigation--link">Отзывы</a>
-            </nav>
+                </nav>
             
             
-            <!-- HERO Services content -->
+                <!-- HERO Services content -->
                 <div class="services__content">
 
                     <div id="content__text" class="services__text">
                         <p class="services__text-short">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-                        <p class="services__text-full">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias sapiente saepe quo quod minus esse dolores quidem ducimus aspernatur amet vero ut incidunt facere, blanditiis inventore magnam perspiciatis suscipit itaque?
-                        Ut optio inventore ipsa sunt eaque eligendi distinctio ratione ab deleniti sed consequuntur perspiciatis minima corporis ipsum quis vel mollitia magni fuga, assumenda aut veritatis! Veniam suscipit cumque quibusdam deserunt?
-                        Harum sequi aspernatur quod blanditiis ut enim tempora soluta deserunt. Repellat, aliquid dolore architecto officia reprehenderit ab perferendis aperiam praesentium mollitia excepturi veritatis at doloribus possimus, placeat eos nesciunt? Beatae!
-                        Dignissimos magni officiis ullam possimus. Velit deleniti, voluptates repellat laboriosam dolorum vel aliquam incidunt natus autem quas eligendi voluptatibus itaque, at ducimus distinctio similique doloremque, enim aspernatur a. Quibusdam, incidunt!
-                        Aperiam dolorum ducimus voluptates amet ratione, quibusdam ex recusandae, consequuntur facere molestiae eius necessitatibus porro, veniam aspernatur iste itaque rem beatae? Debitis consequatur cum ducimus ex sit necessitatibus eligendi saepe.</p>
-
+                        
                     <button  data-target="content__text" class="toggle--btn" data-text-show="Читать далее" data-text-hide="Свернуть">
                         <img src="./img/brands_logo/expand.svg" alt="">
                         <span class="read__more">Читать далее</span>
@@ -197,12 +193,12 @@
                         <img class="services__content__image--img" src="img/cps.png" alt="">
                     </div> 
                 </div>         
-        </section>
+            </section>
 
 
-        <div class="brands__container">
+            <div class="brands__container">
                 <!-- Slider 1 main container -->
-                <div class="swiper swiper__container">
+                <div id="brands-container" class="swiper swiper__container">
 
                 <div class="swiper__title__container">
                     <h2 class="swiper__title--text">РЕМОНТ ТЕХНИКИ РAЗЛИЧНЫХ БРЕНДОВ</h2>
@@ -231,41 +227,212 @@
                 <img src="./img/brands_logo/expand.svg" alt="">
                 <span>Показать все</span>
             </button>
-        </div>
+            </div>
 
 
-        <div class="equipment__container">
-        <!-- Slider 2 main container -->
-        <div class="swiper swiper__container">
+            <div id="equipment-container" class="equipment__container">
+            <!-- Slider 2 main container -->
+            <div class="swiper swiper__container">
 
-        <div class="swiper__title__container">
+            <div class="swiper__title__container">
             <h2 class="swiper__title--text">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
-        </div>
+            </div>
 
-        <!-- Additional required wrapper -->
-        <div id="equipment" class="swiper-wrapper wrapper__equipment">
-        <!-- Slides -->
+            <!-- Additional required wrapper -->
+            <div id="equipment" class="swiper-wrapper wrapper__equipment">
+            <!-- Slides -->
             <div class="swiper-slide equipment-item"><img class="swiper__2--img" src="./img/brands_logo/go.svg" alt="">Ремонт ноутбуков</div>
             <div class="swiper-slide equipment-item"><img class="swiper__2--img" src="./img/brands_logo/go.svg" alt="">Ремонт планшетов</div>
             <div class="swiper-slide equipment-item"><img class="swiper__2--img" src="./img/brands_logo/go.svg" alt="">Ремонт ПК</div>
             <div class="swiper-slide equipment-item"><img class="swiper__2--img" src="./img/brands_logo/go.svg" alt="">Ремонт мониторов</div>
-        
-        </div>
+            </div>
 
-        <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
 
             <button  data-target="equipment" class="toggle--btn" data-text-show="Показать все" data-text-hide="Скрыть">
                 <img src="./img/brands_logo/expand.svg" alt="">
                 <span class="show__more__equipment">Показать все</span>
             </button>    
-    </div>
 
-        
-    </main>
 
-   </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="./js/script.js"></script>
+            <div id="services-container" class="swiper services__container">
+
+            <div class="swiper__title__container">
+                <h2 class="swiper__title--text">ЦЕНЫ НА УСЛУГИ</h2>
+            </div>
+
+            <div class="swiper-wrapper wrapper__services">
+            
+                <!-- Slides -->
+                <div class="swiper-slide services-item">
+                    <div class="services__swiper-label">
+                        <span class="services-label">Ремонтные услуги</span>
+                        <span class="services-value">Услуга 1</span>  
+                    </div>
+                    <div class="services__swiper-price">
+                        <span class="services-label">Стоимость </span>
+                        <span class="services-value">Цена 1</span>  
+                    </div>
+                    <div class="services__swiper-period">
+                        <div>
+                        <span class="services-label">Срок</span>
+                        <span class="services-value">Период 1</span>
+                        </div>
+                        <button class="services--btn"><img src="./img/brands_logo/order.svg" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide services-item">
+                    <div class="services__swiper-label">
+                        <span class="services-label">Ремонтные услуги</span>
+                        <span class="services-value">Услуга 1</span>  
+                    </div>
+                    <div class="services__swiper-price">
+                        <span class="services-label">Стоимость </span>
+                        <span class="services-value">Цена 1</span>  
+                    </div>
+                    <div class="services__swiper-period">
+                        <div>
+                        <span class="services-label">Срок</span>
+                        <span class="services-value">Период 1</span>
+                        </div>
+                        <button class="services--btn"><img src="./img/brands_logo/order.svg" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide services-item">
+                    <div class="services__swiper-label">
+                        <span class="services-label">Ремонтные услуги</span>
+                        <span class="services-value">Услуга 1</span>  
+                    </div>
+                    <div class="services__swiper-price">
+                        <span class="services-label">Стоимость </span>
+                        <span class="services-value">Цена 1</span>  
+                    </div>
+                    <div class="services__swiper-period">
+                        <div>
+                        <span class="services-label">Срок</span>
+                        <span class="services-value">Период 1</span>
+                        </div>
+                        <button class="services--btn"><img src="./img/brands_logo/order.svg" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide services-item">
+                    <div class="services__swiper-label">
+                        <span class="services-label">Ремонтные услуги</span>
+                        <span class="services-value">Услуга 1</span>  
+                    </div>
+                    <div class="services__swiper-price">
+                        <span class="services-label">Стоимость </span>
+                        <span class="services-value">Цена 1</span>  
+                    </div>
+                    <div class="services__swiper-period">
+                        <div>
+                        <span class="services-label">Срок</span>
+                        <span class="services-value">Период 1</span>
+                        </div>
+                        <button class="services--btn"><img src="./img/brands_logo/order.svg" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide services-item">
+                    <div class="services__swiper-label">
+                        <span class="services-label">Ремонтные услуги</span>
+                        <span class="services-value">Услуга 1</span>  
+                    </div>
+                    <div class="services__swiper-price">
+                        <span class="services-label">Стоимость </span>
+                        <span class="services-value">Цена 1</span>  
+                    </div>
+                    <div class="services__swiper-period">
+                        <div>
+                        <span class="services-label">Срок</span>
+                        <span class="services-value">Период 1</span>
+                        </div>
+                        <button class="services--btn"><img src="./brands_logo/order.svg" alt=""></button>
+                    </div>
+                </div>
+
+
+                    
+                
+            
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            
+            </div>
+
+            <!-- Grid  container-->
+            <div class="services__table-container">
+            <h2 class="services__table-title">ЦЕНЫ НА УСЛУГИ</h2>
+                
+            <table class="services__table">
+                <thead>
+                    <tr>
+                    <th class="services__table-label">Ремонтные услуги</th>
+                    <th class="services__table-label">Цена</th>
+                    <th class="services__table-label">Срок</th>
+                    <th class="services__table-label"></th>
+                    </tr>
+                    
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="services__table-value">Услуга 1</td>
+                        <td class="services__table-value">Цена 1</td>
+                        <td class="services__table-value">Период 1</td>
+                        <td><button class="services_order"><img src="./img/brands_logo/order.svg" alt=""></button></td>
+                    </tr>
+                    <tr>
+                        <td class="services__table-value">Услуга 2</td>
+                        <td class="services__table-value">Цена 2</td>
+                        <td class="services__table-value">Период 2</td>
+                        <td><button class="services_order"><img src="./img/brands_logo/order.svg" alt=""></button></td>
+                    </tr>
+                    <tr>
+                        <td class="services__table-value">Услуга 3</td>
+                        <td class="services__table-value">Цена 3</td>
+                        <td class="services__table-value">Период 3</td>
+                        <td><button class="services_order"><img src="./img/brands_logo/order.svg" alt=""></button></td>
+                    </tr>
+                    <tr>
+                        <td class="services__table-value">Услуга 4</td>
+                        <td class="services__table-value">Цена 4</td>
+                        <td class="services__table-value">Период 4</td>
+                        <td><button class="services_order"><img src="./img/brands_logo/order.svg" alt=""></button></td>
+                    </tr>
+                    <tr>
+                        <td class="services__table-value">Услуга 5</td>
+                        <td class="services__table-value">Цена 5</td>
+                        <td class="services__table-value">Период 5</td>
+                        <td><button class="services_order"><img src="./img/brands_logo/order.svg" alt=""></button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            </div>
+
     
-  </body>
+            <div class="condition-text">
+            Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+            </div> 
+            <a class="offer_anchor" href="#">Получить коммерческое предложение<img src="./img/ic/Line.svg"></a>
+    
+        </main>
+        <footer>
+            <div>© 2019 CPS <br> Разработано командой Apesong</div> 
+            <div>Политика конфиденциальности</div>
+            <div>Информация, размещенная на данной странице, не является публичной офертой</div>
+        </footer>
+        </div>
+  
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="./js/script.js"></script>
+    
+  
+    </body>
 </html>

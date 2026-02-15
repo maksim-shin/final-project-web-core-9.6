@@ -1,11 +1,7 @@
-
-
 import '../scss/style.scss';
-
 /* =========================
    BURGER MENU
 ========================= */
-
 const burgerButtons = document.querySelectorAll('.button-js');
 const menu = document.querySelector('.modal__navigation');
 const overlay = document.querySelector('.overlay');
@@ -27,47 +23,54 @@ if (overlay) {
 /* =========================
    SWIPERS
 ========================= */
-
 const swipers = {};
 
-function initSwiper(id) {
-  const container = document.getElementById(id);
-  if (!container || swipers[id]) return;
+function initSwiper(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container || swipers[containerId]) return;
 
-  swipers[id] = new Swiper(`#${id}`, {
+  const wrapper = container.querySelector('.swiper');
+  const pagination = container.querySelector('.swiper-pagination');
+
+  if (!wrapper || !pagination) return;
+
+  swipers[containerId] = new Swiper(wrapper, {
     slidesPerView: 'auto',
     centeredSlides: true,
     spaceBetween: 16,
     pagination: {
-      el: `#${id} ~ .swiper-pagination`,
+      el: pagination,
       clickable: true,
     },
   });
 }
 
-function destroySwiper(id) {
-  if (swipers[id] && typeof swipers[id].destroy === 'function') {
-    swipers[id].destroy(true, true);
-    swipers[id] = null;
+function destroySwiper(containerId) {
+  if (swipers[containerId] && typeof swipers[containerId].destroy === 'function') {
+    swipers[containerId].destroy(true, true);
+    swipers[containerId] = null;
   }
 }
 
 function handleSwipers() {
-  const screenMobile = window.innerWidth < 768;
+  const isMobile = window.innerWidth < 768;
 
-  ['brands', 'equipment'].forEach(id => {
-    const wrapper = document.getElementById(id);
-    if (!wrapper) return;
+  ['brands-container', 'equipment-container'].forEach(containerId => {
+    const container = document.getElementById(containerId);
+    if (!container) return;
 
-    if (screenMobile) {
-      initSwiper(id);
-      const btn = document.querySelector(`.toggle--btn[data-target="${id}"]`);
-      if (btn) btn.style.display = 'none';
-      wrapper.classList.remove('is-open');
+    const wrapper = container.querySelector('.swiper-wrapper');
+    const toggleBtn = container.querySelector('.toggle--btn');
+
+    if (isMobile) {
+      initSwiper(containerId);
+      if (toggleBtn) toggleBtn.style.display = 'none';
+      container.classList.remove('is-open');
     } else {
-      destroySwiper(id);
-      const btn = document.querySelector(`.toggle--btn[data-target="${id}"]`);
-      if (btn) btn.style.display = wrapper.scrollHeight > wrapper.clientHeight ? 'flex' : 'none';
+      destroySwiper(containerId);
+      if (toggleBtn) {
+        toggleBtn.style.display = wrapper.scrollHeight > wrapper.clientHeight ? 'flex' : 'none';
+      }
     }
   });
 }
@@ -79,53 +82,26 @@ handleSwipers();
 window.addEventListener('resize', handleSwipers);
 
 /* =========================
-   TOGGLE BUTTON
+   TOGGLE BUTTONS
 ========================= */
 const toggleButtons = document.querySelectorAll('.toggle--btn');
 
 toggleButtons.forEach(button => {
-  const targetId = button.dataset.target; // ID блока
-  const wrapper = document.getElementById(targetId); 
+  const targetId = button.dataset.target; // ID контейнера
+  const container = document.getElementById(targetId); 
   const span = button.querySelector('span'); // текст кнопки
   const textShow = button.dataset.textShow;   // текст при закрытом состоянии
   const textHide = button.dataset.textHide;   // текст при открытом состоянии
 
-  if (!wrapper) return; // защита от ошибки
+  if (!container) return;
 
   button.addEventListener('click', () => {
-    wrapper.classList.toggle('is-open');
+    container.classList.toggle('is-open');
 
-    if (wrapper.classList.contains('is-open')) {
+    if (container.classList.contains('is-open')) {
       span.textContent = textHide;
     } else {
       span.textContent = textShow;
     }
-
   });
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-  const toggleButtons = document.querySelectorAll('.toggle--btn');
-
-  toggleButtons.forEach(button => {
-    const targetId = button.dataset.target;
-    if (!targetId) return;
-
-    const wrapper = document.getElementById(targetId);
-    if (!wrapper) return;
-
-    const fullText = wrapper.querySelector('.services__text-full');
-    const span = button.querySelector('span');
-    if (!fullText || !span) return;
-
-    button.addEventListener('click', () => {
-      fullText.classList.toggle('is-open');
-
-      span.textContent = fullText.classList.contains('is-open')
-        ? button.dataset.textHide
-        : button.dataset.textShow;
-    });
-  });
-});
-
-
