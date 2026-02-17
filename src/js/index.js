@@ -37,7 +37,7 @@ function initSwiper(containerId) {
   try {
     swipers[containerId] = new Swiper(container.querySelector('.swiper') || container, {
       slidesPerView: 'auto',
-      centeredSlides: true,
+      centeredSlides: true, 
       spaceBetween: 16,
       pagination: {
         el: pagination,

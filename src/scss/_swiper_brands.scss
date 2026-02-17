@@ -3,8 +3,6 @@
 
 .brands__container {    
     width: 100%;
-    height: 1000px;
-    background-color: #F8F8F8;
 
 }
 /* SWIPER */
@@ -16,46 +14,43 @@
 
 /* Swiper title */
 .swiper__title__container {
-    padding: 16px;
-  
-    margin-bottom: 24px;
-    width: 100%;
-    height: 80px;
+  padding: 16px;
 
-    display: flex;
-    align-items: center;
-    
+  margin-bottom: 24px;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+    background: linear-gradient(90deg, $color-bg 0%, $color-white 98.61%);
 }
 
 .swiper__title--text {
-  width: 100%;
-  font-family: $font-main;
+  padding: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
   text-transform: uppercase;
-  background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);  
+  color: $color-gray;
 }
 
 
 /* Swiper slide box */
 .swiper-wrapper {
   margin-bottom: 36px;
-
-  
 }
 
 .swiper-slide.brands-item {
+  margin: 16px;
+  padding: 16px;
   width: 240px;
   height: 72px;
 
 }
 
-
-
 .swiper-pagination-bullet-active {
-    background-color: gray;   
+    background-color: $color-gray;   
 }
 
 
@@ -91,10 +86,10 @@
   .swiper-wrapper.wrapper__brands {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-left: 16px;
 
-    max-height: 175px;
+    
+    padding: 16px;
+    max-height: 200px;
     overflow: hidden;
     transition: max-height 0.4s ease;
   }

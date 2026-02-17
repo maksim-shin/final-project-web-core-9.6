@@ -1,15 +1,19 @@
 
 @use './variables' as *;
 /* Swiper container */
+.swiper__title__container {
+   background: linear-gradient(270deg, $color-bg 0%, $color-white 98.61%);
+}
 .swiper__title--text {
+  width: 100%;
 padding: 16px;
 font-weight: 400;
 font-size: 16px;
 line-height: 24px;
 letter-spacing: -0.2px;
 text-transform: uppercase;
-color: $color-bg;
- background: linear-gradient(270deg, $color-bg 0%, $color-white 98.61%);
+color: $color-gray;
+
 }
 
 .swiper-slide.services-item {
